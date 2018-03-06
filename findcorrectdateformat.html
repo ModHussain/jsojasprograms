@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>find the correct date format</title>
+	<!-- eg: dd/mm/yy
+		dd-mm-yy -->
+</head>
+<body>
+	<script type="text/javascript">
+		
+		var today = new Date();
+		var dd = today.getDate();
+
+		var mm = today.getMonth()+1; 
+		var yyyy = today.getFullYear();
+		if(dd<10) 
+		{
+		    dd='0'+dd;
+		} 
+
+		if(mm<10) 
+		{
+		    mm='0'+mm;
+		} 
+		today = mm+'-'+dd+'-'+yyyy;
+		console.log(today);
+		today = mm+'/'+dd+'/'+yyyy;
+		console.log(today);
+		today = dd+'-'+mm+'-'+yyyy;
+		console.log(today);
+		today = dd+'/'+mm+'/'+yyyy;
+		console.log(today);
+
+	</script>
+
+	<!-- Explanation:
+	The getDate() method is used to get the day of the month for the specified date according to local time. The value returned by getDate() is an integer between 1 and 31.
+
+	The getMonth() method returns the month in the specified date according to local time, as a zero-based value (where zero indicates the first month of the year). The value returned by getMonth() is an integer between 0 and 11. 0 corresponds to January, 1 to February, and so on.
+
+	The getFullYear() method is used to get the year of the specified date according to local time. The value returned by the method is an absolute number. For dates between the years 1000 and 9999, getFullYear() returns a four-digit number, for example, 1985. -->
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>convert the minutes into no of hours and minutes</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function timeConvert(n) {
+			var num = n;
+			var hours = (num / 60);
+			var rhours = Math.floor(hours);//math.floor(4.7) returns 4 it displays rounded values
+			var minutes = (hours - rhours) * 60;
+			var rminutes = Math.round(minutes);//Math.round(4.7) returns the value of x rounded to its nearest integer:5
+			return num + " minutes = " + rhours + " hour(s) and " + rminutes + " minute(s).";
+			}
+
+			console.log(timeConvert(200));
+				</script>
+
+</body>
+</html>
